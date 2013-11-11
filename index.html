@@ -1,0 +1,42 @@
+<head>
+<style>
+.screen {
+width: 31.25%;
+background-color: red;
+height: 200px;
+position: absolute;
+left:50%;
+top:50px;
+margin-left: -15.625%;
+-webkit-transition: all 1.25s ease-out;
+display: inline-block;
+z-index: 0;
+transition: all 1.25s;
+opacity: .4;
+}
+.background[name=red] {
+-webkit-transform: translate(-120%, -20px) scale(.8, .8);
+}
+.background[name=blue] {
+-webkit-transform: translate(-40%, -20px) scale(.8, .8);
+}
+.background[name=green] {
+-webkit-transform: translate(40%, -20px) scale(.8, .8);
+}
+.background[name=pink] {
+-webkit-transform: translate(120%, -20px) scale(.8, .8);
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+<span class='screen background' name='red'>
+</span>
+<span class='screen background' name='blue' style='background-color:blue;'>
+</span>
+<span class='screen background' name='green' style='background-color:green;'>
+</span>
+<span class='screen background' name='pink' style='background-color:pink;'>
+</span>
+</body>
