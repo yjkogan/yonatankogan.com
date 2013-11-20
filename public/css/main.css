@@ -1,8 +1,12 @@
+html {
+    height: 100%;
+}
 body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    height: 100%;
 }
 
 #header {
@@ -12,6 +16,7 @@ body {
     background: -ms-linear-gradient(top, #373737, #212121);
     background: -o-linear-gradient(top, #373737, #212121);
     background: linear-gradient(top, #373737, #212121);
+    display: block;
 }
 
 #title {
@@ -19,66 +24,75 @@ body {
     vertical-align: center;
     font-size: 24px;
     margin-left: 25px;
-    line-height: 1.7;
 }
 
 .link-container {
+    /* background stuff */
     background: #212121;
     background: -moz-linear-gradient(top, #373737, #212121);
     background: -webkit-linear-gradient(top, #373737, #212121);
     background: -ms-linear-gradient(top, #373737, #212121);
     background: -o-linear-gradient(top, #373737, #212121);
     background: linear-gradient(top, #373737, #212121);
+    /* text stuff */
     color: white;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2em;
+    /* positioning */
     position: absolute;
     bottom: 0;
-    height: 19%;
     width: 100%;
+    height: 2em;
 }
 
 .screen {
-    width: 50%; 
-    height: 60%;
-    position: absolute;
-    margin-left: 2%;
-    top:38%;
+    width: 25%;
+    height: 30%;
+    min-width: 330px;
+    float: left;
     -webkit-transition: all 1.25s ease-out;
-    display: inline-block;
-    transition: all 1.25s;
-    z-index: 100;
-    opacity: 1;
+    transition: all 1.25s ease-out;
+    z-index: 0;
+    opacity: .4;
     overflow: hidden;
-    background-color: white;
-    /*border: 1px solid black;*/
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.background {
-    opacity: .4;
-    z-index: 0;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    border: none;
+#projects {
+    background-image: url("/img/terminal.png");
 }
-.background#projects {
-    -webkit-transform: translate(-25%, -80%) scale(.5, .5);
+#github {
+    background-image: url("/img/github.jpeg");
 }
-.background#github {
-    -webkit-transform: translate(25%, -80%) scale(.5, .5);
+#resume {
+    background-image: url("/img/resume.jpg");
 }
-.background#resume {
-    -webkit-transform: translate(75%, -80%) scale(.5, .5);
+#blog {
+    background-image: url("/img/jekyll.png");
 }
-.background#blog {
-    -webkit-transform: translate(125%, -80%) scale(.5, .5);
+.foreground {
+    opacity: 1;
+    z-index: 100;
+}
+.foreground#projects {
+    -webkit-transform: translate(50%, 150%) scale(1.8, 1.8);
+}
+
+.foreground#github {
+    -webkit-transform: translate(-50%, 150%) scale(1.8, 1.8);
+}
+.foreground#resume {
+    -webkit-transform: translate(-150%, 150%) scale(1.8, 1.8);
+}
+.foreground#blog {
+    -webkit-transform: translate(-250%, 150%) scale(1.8, 1.8);
 }
 
 .screen img {
     width: 100%;
-}
-.link-container {
-    text-align: center;
-    font-size: 36px;
-    line-height: 2.2;
 }
 .link-container a {
     text-decoration: none;
