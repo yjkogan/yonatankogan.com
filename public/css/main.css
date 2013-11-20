@@ -93,11 +93,13 @@ body {
     width: 100%;
 }
 .link-container a {
-    text-decoration: none;
     color: white;
 }
 .link-container a:hover {
     color: #24e4ff;
+}
+.link-container a[disabled] {
+    text-decoration: none;
 }
 .link-container a[disabled]:hover {
     color: white;
