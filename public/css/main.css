@@ -55,7 +55,6 @@ body {
     transition: all 1.25s ease-out;
     z-index: 0;
     opacity: .4;
-    overflow: hidden;
     position: relative;
     background-size: contain;
     background-repeat: no-repeat;
@@ -90,7 +89,6 @@ body {
 .foreground#blog {
     -webkit-transform: translate(-250%, 150%) scale(1.8, 1.8);
 }
-
 .screen img {
     width: 100%;
 }
@@ -98,12 +96,29 @@ body {
     text-decoration: none;
     color: white;
 }
-
 .link-container a:hover {
     color: #24e4ff;
 }
-
 .link-container a[disabled]:hover {
     color: white;
     cursor: default;
+}
+
+.section-content {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */        
+    transition: all 1.25s ease-out;
+    z-index: -1;
+}
+
+.foreground .section-content {
+    opacity: 1;
+    margin-left: 105%;
+
 }

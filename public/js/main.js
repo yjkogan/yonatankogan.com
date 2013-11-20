@@ -18,24 +18,24 @@ $(function() {
     }
   });
 
-  // $("body").keydown(function(e) {
-  //   var $screens = $(".screen");
-  //   var current = undefined;
-  //   for(var i=0; i < $screens.length; i++) {
-  //     if (!$screens.eq(i).hasClass('background')) {
-  //       current = i;
-  //       break;        
-  //     }
-  //   }
-  //   var next = current;
-  //   if(e.keyCode == 37) { // left
-  //     next = ((current - 1) + $screens.length) % $screens.length;
-  //   }
-  //   else if(e.keyCode == 39) { // right
-  //     next = (current + 1) % $screens.length;
-  //   }
-  //   selectScreenWithName($screens.eq(next).attr('name'));
-  // });
+  $("body").keydown(function(e) {
+    var $screens = $(".screen");
+    var current = undefined;
+    for(var i=0; i < $screens.length; i++) {
+      if ($screens.eq(i).hasClass('foreground')) {
+        current = i;
+        break;        
+      }
+    }
+    var next = current;
+    if(e.keyCode == 37) { // left
+      next = ((current - 1) + $screens.length) % $screens.length;
+    }
+    else if(e.keyCode == 39) { // right
+      next = (current + 1) % $screens.length;
+    }
+    selectScreenWithName($screens.eq(next).attr('name'));
+  });
 
   // Initialize
   var timeoutID = window.setTimeout(function() {
