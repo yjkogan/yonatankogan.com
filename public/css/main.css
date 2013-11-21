@@ -48,16 +48,16 @@ body {
 
 .screen {
     width: 25%;
-    height: 30%;
-    min-width: 330px;
+    height: 28%;
     float: left;
     -webkit-transition: all 1.25s ease-out;
     transition: all 1.25s ease-out;
     z-index: 0;
     opacity: .4;
     position: relative;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #projects {
@@ -79,7 +79,6 @@ body {
 .foreground#projects {
     -webkit-transform: translate(50%, 150%) scale(1.8, 1.8);
 }
-
 .foreground#github {
     -webkit-transform: translate(-50%, 150%) scale(1.8, 1.8);
 }
@@ -117,10 +116,10 @@ body {
     box-sizing: border-box;         /* Opera/IE 8+ */        
     transition: all 1.25s ease-out;
     z-index: -1;
+    overflow: scroll;
 }
 
 .foreground .section-content {
     opacity: 1;
     margin-left: 105%;
-
 }
